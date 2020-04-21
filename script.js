@@ -23,10 +23,10 @@ DomElement.prototype.createElement = function(text){
         elem.textContent = text;
         console.log(elem);
     }
-    elem.style.cssText = `'height:' + ${this.height} + 'px;' +
-    'width:' + ${this.width} + 'px;' +
-    'bg:' + ${this.bg} +
-    'fontSize:' + ${this.fontSize} + 'px;'`;
+    elem.style.cssText = `height: ${this.height}px;
+    width: ${this.width}px;
+    background-color: ${this.bg};
+    fontSize: ${this.fontSize}px;`;
     
     console.log(this.height);
     console.log(text);
