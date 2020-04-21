@@ -15,10 +15,12 @@ DomElement.prototype.createElement = function(text){
     if (this.selector[0] === '.'){
         elem = document.createElement('div');
         elem.className = this.selector; 
+        elem.textContent = text;
         console.log(elem);
     } else if (this.selector[0] === '#'){
         elem = document.createElement('p');
         elem.id = this.selector;
+        elem.textContent = text;
         console.log(elem);
     }
     'height:' + this.height + 'px;';
@@ -27,6 +29,7 @@ DomElement.prototype.createElement = function(text){
     'fontSize:' + this.fontSize + 'px;';
     console.log(this.height);
     console.log(text);
+    document.body.append(elem);
 }
 
 const element = new DomElement('.elem',  150, 50, 'red', 25);
